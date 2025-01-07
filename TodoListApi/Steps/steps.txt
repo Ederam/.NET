@@ -1,0 +1,30 @@
+
+Archivo recreado por datos perdidos de git
+
+Video Guia
+https://www.youtube.com/watch?v=IhzQUI6XHPw
+Creación de una API web con ASP.NET Core
+
+se ha actualizado el repositorio desde github desktop
+
+**PENDIENTE VALIDAR PORQUE AL ACTUALZIAR CAMBIOS SIN EJECUTAR LA APLICACION APARECEN DATOS DE LA CARPETA .vs POR SUBIR
+
+3:56
+
+Añadir paquetes para uso de SQL Server en la aplicación
+
+Pasos para enlazar a git y crear repositorio remoto
+echo "# .Net" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Ederam/.Net.git
+git push -u origin main
+
+echo "# .Net" >> README.md
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Ederam/.Net.git
+git push -u origin main

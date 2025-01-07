@@ -1,0 +1,72 @@
+﻿Descripcion ==> Error adicionando archivos a repositorio
+Instruccion ==> git add .
+Error ==> 
+PS D:\TCS\RMG\.Net\TodoLisApi> git add .
+error: open("TodoListApi/.vs/TodoListApi/FileContentIndex/46c7b3b6-c82c-4b3b-afba-ca532f667011.vsidx"): Permission denied
+error: unable to index file 'TodoListApi/.vs/TodoListApi/FileContentIndex/46c7b3b6-c82c-4b3b-afba-ca532f667011.vsidx'
+fatal: adding files failed
+Solucion sugerida 1 ==>
+git config core.sharedRepository 0664 (Configure git para administrar archivos con permisos compartidos correctos).
+Resultado ==> mismo error
+Solucion sugerida 2 ==>
+Busque archivos y carpetas existentes con permisos incorrectos. Dentro de la carpeta principal del repositorio de Git:
+find .git -type d -not -user *youruser*
+find .git -type d -not -user *ederam*
+sudo chown -R *youruser* .git
+sudo chown -R *ederam* .git
+sudo chmod -R ug+w .git
+Solucion sugerida 3 ==> Reiniciar Visual Studio e intentarlo
+
+Descripcion ==> erro intentando enlazar con repositorio remoto
+Instruccion ==> git push -u origin main
+Error ==> error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/Ederam/.Net.git'
+Sug 1 ==> sugieren corrar el repositorio y empezar de 0 con el remoto
+
+Descripcion ==> intento de actualizacion de codigo en el repositorio
+Instruccion ==> git push origin main --force
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/Ederam/.Net.git'
+sugerencia ==> Para solucionarlo, reinicialice y siga la secuencia adecuada:
+git init
+Reinitialized existing shared Git repository in D:/TCS/RMG/.Net/TodoLisApi/.git/
+git add .
+error: open("TodoListApi/.vs/TodoListApi/FileContentIndex/46c7b3b6-c82c-4b3b-afba-ca532f667011.vsidx"): Permission denied
+
+git commit -m 'message'
+git *create remote
+git push -u origin master
+
+Descripcion ==> intentando solucionar error de git add . 
+Instruccion ==> git add -f .vs/config/applicationhost.config
+Error ==> fatal: pathspec '.vs/config/applicationhost.config' did not match any files
+sugerencia ==>Finalmente se elimino la carpeta .git y se gerno script sugerido por github
+echo "# .Net" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Ederam/.Net.git
+git push -u origin main
+FINALMENTE SE SOLUCIONO DESDE GITHUB DESKTOP AÑADIENDO LA CARPETA Y ELEMENTOS DE .vs
+
+Descripcion ==> 
+Instruccion ==> 
+Error ==> 
+sugerencia ==>
+
+Descripcion ==> 
+Instruccion ==> 
+Error ==> 
+sugerencia ==>
+
+Descripcion ==> 
+Instruccion ==> 
+Error ==> 
+sugerencia ==>
+
+Descripcion ==> 
+Instruccion ==> 
+Error ==> 
+sugerencia ==>
+
