@@ -50,10 +50,27 @@ git remote add origin https://github.com/Ederam/.Net.git
 git push -u origin main
 FINALMENTE SE SOLUCIONO DESDE GITHUB DESKTOP AÑADIENDO LA CARPETA Y ELEMENTOS DE .vs
 
-Descripcion ==> 
-Instruccion ==> 
-Error ==> 
-sugerencia ==>
+Descripcion ==> Error intentando crear servidor de base de datos
+Instruccion ==> Desde Mangment SQL Server
+Error ==> TITLE: No Local Servers Found
+No local servers of type 'Database Engine' were found.
+sugerencia ==> Ingresar al simbolo de sistema como administrador
+sqllocaldb info
+	MSSQLLocalDB	
+	MyServer2025
+sqllocaldb versions
+	Microsoft SQL Server 2019 (15.0.4382.1)
+sqllocaldb create "Your db Name" 
+version name given if you find it (This creates a local db engine) 
+-> In SSMS Server Name : (LocalDb)\Your db Name
+-> In SSMS Server Name : (LocalDb)\MyServer2025
+
+sqllocaldb create "MyServer2025" 
+	LocalDB instance "MyServer2025" created with version 15.0.4382.1.
+Luego añadir en el Object Explorer de Managment SQL Server el servidor creado 
+Conect/Database Engine/ en campo server name
+	(LocalDb)\MyServer2025
+	(LocalDb)\MSSQLLocalDB
 
 Descripcion ==> 
 Instruccion ==> 

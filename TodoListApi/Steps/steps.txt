@@ -38,6 +38,11 @@ Creacion de servidor de SQL Server
 Server Name: Server2025WA
 Windows Autenticacion
 
+página Guia
+https://learn.microsoft.com/es-es/sql/relational-databases/lesson-1-connecting-to-the-database-engine?view=sql-server-ver16
+Grupos de servidores locales/Tareas/Registrar servidores locales/
+
+Se crea la conexion y se procede a generar script para crear base de datos 
 
 Video Guia
 https://www.youtube.com/watch?v=IhzQUI6XHPw

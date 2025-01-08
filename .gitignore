@@ -1,2 +1,5 @@
 
 /.vs
+/TodoListApi/obj
+TodoListApi/obj/Debug/net8.0/TodoListApi.AssemblyInfoInputs.cache
+TodoListApi/obj/Debug/net8.0/TodoListApi.AssemblyInfo.cs
