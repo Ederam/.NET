@@ -72,10 +72,15 @@ Conect/Database Engine/ en campo server name
 	(LocalDb)\MyServer2025
 	(LocalDb)\MSSQLLocalDB
 
-Descripcion ==> 
-Instruccion ==> 
-Error ==> 
-sugerencia ==>
+Descripcion ==> Intentado crear una tabla desde la linea de comendos del administrador de paquetes
+Instruccion ==> Update-database
+Error ==> The ConnectionString property has not been initialized.
+sugerencia ==> no se encontraba la clave para connectionStrings
+"ConnectionStrings": {
+    "Connection": "Server=(LocalDb)\\MyServer2025;Database=TEST_EXERCISES;Trusted_Connection=True;TrustServerCertificate=True",
+    "QA_Context": "Data Source=QSCCWSQL01.qscc.local;Initial Catalog=QSCC_QA;Integrated Security=True;TrustServerCertificate=True;MultipleActiveResultSets=true;Encrypt=True"
+
+  }
 
 Descripcion ==> 
 Instruccion ==> 

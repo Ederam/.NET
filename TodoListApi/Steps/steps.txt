@@ -44,9 +44,38 @@ Grupos de servidores locales/Tareas/Registrar servidores locales/
 
 Se crea la conexion y se procede a generar script para crear base de datos 
 
+
 Video Guia
 https://www.youtube.com/watch?v=IhzQUI6XHPw
 Creación de una API web con ASP.NET Core
-5:00
+5:48
 
+Añadir carpeta de Models y crear modelo con 3 campos
+TodoItem
+crear carpeta Context
+añadir clase AppDbContext
+hacer que herede de DbContext
+Configurar cadena de conexion
+	appsettings.json
+		"Connection": "Server:(LocalDb)\MyServer2025;Database=TEST_EXERCISES;Trusted_Connection=true;TrustServerCertificate=true"
+		ó "Connection": "Server:.\\MyServer2025;Database=TEST_EXERCISES;Trusted_Connection=true;TrustServerCertificate=true"
+Registrar la conexion
+	en program.cs instanciar conexion
+		var connectionString = builder.Configuration.GetConnectionString("Connection");
+		builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
+12:00
+creacion de migracion desde consola
+Consola de administrador de paquetes
+Add-Migration AddTableTodoItems
+Update-database
 
+13:50
+Scaffolding
+en la carpeta de 
+	Controllers/Agregar elemento con scaffol.../controlador de api con acciones usando entityframework
+
+	
+
+Video Guia
+https://www.youtube.com/watch?v=IhzQUI6XHPw
+Creación de una API web con ASP.NET Core
